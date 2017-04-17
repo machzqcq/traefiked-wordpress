@@ -35,7 +35,7 @@
         restart_policy:
           condition: on-failure
         labels:
-          - "traefik.frontend.rule=Host:beluga"
+          - "traefik.frontend.rule=Host:beluga.seleniumframework.com"
           - "traefik.docker.network=traefiked-wordpress_traefik"
           - "traefik.port=80"
       environment:
@@ -61,8 +61,8 @@
         restart_policy:
           condition: on-failure
         labels:
-          - "traefik.frontend.rule=Host:humpback"
-          - "traefik.docker.network=multi-site-proxy_traefik"
+          - "traefik.frontend.rule=Host:humpback.seleniumframework.com"
+          - "traefik.docker.network=traefiked-wordpress_traefik"
           - "traefik.port=80"
       environment:
         WORDPRESS_DB_HOST: "dbcluster"
